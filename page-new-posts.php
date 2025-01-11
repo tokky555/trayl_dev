@@ -10,7 +10,7 @@ Template Name: 新着記事一覧
 
 <head>
     <meta charset="UTF-8">
-    <title>TRAIL</title>
+    <title>TRAYL</title>
     <?php get_template_part('template-parts/head'); ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/list.css">
     <!-- jsライブラリの読み込み（スライドショー） -->

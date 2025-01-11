@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
-<title>TRAIL</title>
+<title>TRAYL</title>
 <meta name="description" content="ちょっと寄り道してみるのもありかな、と一息つける逃げ場となるようなWEBマガジンを目指しています。">
 <meta name="viewport" content="width=device-width" ,initial-scale=1>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/single.css">
