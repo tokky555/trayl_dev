@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TRAIL</title>
+    <meta name="description" content="ちょっと寄り道してみるのもありかな、と一息つける逃げ場となるようなWEBマガジンを目指しています。">
+    <meta name="viewport" content="width=device-width" ,initial-scale=1>
+    <link rel="stylesheet" href="http://trail-local.local/wp-content/themes/trail-dev/list.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/svg" href="http://trail-local.local/wp-content/themes/trail-dev/design/favicon.svg">
+    <!-- jsライブラリの読み込み（スライドショー） -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <?php wp_head(); ?>
+</head>
+
+<body>
+    <header class="top-header">
+        <div class="openbtn">
+            <!-- ハンバーガーメニューのアイコン -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="logo"><img src="http://trail-local.local/wp-content/themes/trail-dev/design/TRALロゴ_black.svg" alt="TRAILトップページ"></div>
+        <div class="date-container">
+            <p class="year">2023 MO</p>
+            <p class="dateofweek">07.03</p>
+            <span class="date-bar"></span>
+        </div>
+        <div class="menu-open">
+            <div id="g-menu-list">
+                <div class="categories-list">
+                    <div class="menu-title-container">
+                        <img id="menu-open-logo" src="http://trail-local.local/wp-content/themes/trail-dev/design/TRALロゴ_black.svg" alt="TRAILトップページ">
+                        <form action="#" class="search-form-001">
+
+                            <input type="text" placeholder="キーワードを入力">
+
+                            <button type="submit" aria-label="検索"></button>
+                        </form>
+                        <div class="balloon">
+                            カテゴリー
+                        </div>
+                        <h2 class="menu-title">8CATEGORIES</h2>
+                        <div class="grid">
+                            <div class="item"><span class="menu-name">BOOK</span></br><span
+                                    class="menu-japasense">本を読む</span>
+                                <div class="menu-icon">
+                                    <img src="http://trail-local.local/wp-content/themes/trail-dev/design/book_logo.svg" alt="bookメニューのアイコンです">
+                                </div>
+                            </div>
+                            <div class="item"><span class="menu-name">EAT</span></br><span
+                                    class="menu-japasense">食べる</span>
+                                <div class="menu-icon">
+                                    <img src="http://trail-local.local/wp-content/themes/trail-dev/design/eat_logo.svg" alt="eatメニューのアイコンです">
+                                </div>
+                            </div>
+                            <div class="item"><span class="menu-name">GALLERY</span></br><span
+                                    class="menu-japasense">フォトギャラリー</span>
+                                <div class="menu-icon">
+                                    <img src="http://trail-local.local/wp-content/themes/trail-dev/design/photo.svg" alt="galleryメニューのアイコンです">
+                                </div>
+                            </div>
+                            <div class="item"><span class="menu-name">LEARN</span></br><span
+                                    class="menu-japasense">学ぶ</span>
+                                <div class="menu-icon">
+                                    <img src="http://trail-local.local/wp-content/themes/trail-dev/design/learn.svg" alt="learnメニューのアイコンです">
+                                </div>
+                            </div>
+                            <div class="item"><span class="menu-name">CULTURE</span></br><span
+                                    class="menu-japasense">音楽/映画/ドラマetc</span>
+                                <div class="menu-icon">
+                                    <img src="http://trail-local.local/wp-content/themes/trail-dev/design/culture.svg" alt="cultureメニューのアイコンです">
+                                </div>
+                            </div>
+                            <div class="item"><span class="menu-name">LIFE</span></br><span
+                                    class="menu-japasense">生活する</span>
+                                <div class="menu-icon">
+                                    <img src="http://trail-local.local/wp-content/themes/trail-dev/design/LIFE.svg" alt="lifeメニューのアイコンです">
+                                </div>
+                            </div>
+                            <div class="item"><span class="menu-name">VISIT</span></br><span
+                                    class="menu-japasense">出かける/旅する</span>
+                                <div class="menu-icon">
+                                    <img src="http://trail-local.local/wp-content/themes/trail-dev/design/visit.svg" alt="visitメニューのアイコンです">
+                                </div>
+                            </div>
+                            <div class="item"><span class="menu-name">HOBBY</span></br><span
+                                    class="menu-japasense">趣味</span>
+                                <div class="menu-icon">
+                                    <img src="http://trail-local.local/wp-content/themes/trail-dev/design/hobby.svg" alt="hobbyメニューのアイコンです">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="sns-list"><img src="http://trail-local.local/wp-content/themes/trail-dev/design/instagram.svg" alt="instagramのアイコンです。"><img
+                            src="http://trail-local.local/wp-content/themes/trail-dev/design/youtube.svg" alt="youtube">
+                    </div>
+                    <p>CONTACT：reitokky@gmail.com</p>
+                    <p>(c) TRAIL All Rights Reserved. </p>
+                </footer>
+            </div>
+        </div>
+    </header>
+
+    <div class="line"></div>
+    <div class="category-name">
+        <p class="category-name-english">EAT</p>
+        <p class="category-name-japanese">食べる</p>
+    </div>
+
+    <ul class="corner-tag-list">
+        <li class="tag_name">#ALL</li>
+        <li class="tag_name">#東京</li>
+        <li class="tag_name">#カフェ・喫茶店</li>
+        <li class="tag_name">#ランチ</li>
+        <li class="tag_name">#ディナー</li>
+        <li class="tag_name">#居酒屋</li>
+        <li class="tag_name">#神奈川</li>
+        <li class="tag_name">#お土産</li>
+        <li class="tag_name">#まとめ</li>
+    </ul>
+
+    <div class="double_border"></div>
+
+    <div class="list-view-content-second">
+        <div class="thum_box">
+            <img src="image/top_image.JPG" alt="サムネイル2">
+        </div>
+        <div class="article-text">
+            <p class="article-date">2023.07.03 (mon)</p>
+            <p class="article-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+        </div>
+    </div>
+    <div class="list-view-content-second">
+        <div class="thum_box">
+            <img src="image/top_image.JPG" alt="サムネイル2">
+        </div>
+        <div class="article-text">
+            <p class="article-date">2023.07.03 (mon)</p>
+            <p class="article-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+        </div>
+    </div>
+    <div class="list-view-content-second">
+        <div class="thum_box">
+            <img src="image/top_image.JPG" alt="サムネイル2">
+        </div>
+        <div class="article-text">
+            <p class="article-date">2023.07.03 (mon)</p>
+            <p class="article-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+        </div>
+    </div>
+
+    <div class="pager-container">
+        <div class="pager">
+            <div class="back">
+                &larr;
+            </div>
+            <p>
+                10/11
+            </p>
+            <div class="next">
+                &rarr;
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <div class="sns-list"><img src="http://trail-local.local/wp-content/themes/trail-dev/design/instagram.svg" alt="instagramのアイコンです。"><img
+                src="http://trail-local.local/wp-content/themes/trail-dev/design/youtube.svg" alt="youtube">
+        </div>
+        <p>CONTACT：reitokky@gmail.com</p>
+        <p>(c) TRAIL All Rights Reserved. </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <?php wp_footer(); ?>
+</body>
+
+</html>
