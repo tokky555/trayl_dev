@@ -141,3 +141,16 @@ function trail_customize_register( $wp_customize ) {
     ) ) );
 }
 add_action( 'customize_register', 'trail_customize_register' );
+
+function my_custom_ga4_tracking() {
+    echo "
+    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-G-6SD1GRBX7H\"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-G-6SD1GRBX7H');
+    </script>
+    ";
+}
+add_action('wp_head', 'my_custom_ga4_tracking');
