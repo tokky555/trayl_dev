@@ -11,6 +11,16 @@
     <?php wp_head(); ?>
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6SD1GRBX7H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6SD1GRBX7H');
+</script>
+
 <body>
 <?php get_template_part('template-parts/header'); ?>
 
