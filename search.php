@@ -52,45 +52,6 @@
     ?>
 </div>
 
-
-    <ul class="corner-tag-list">
-        <?php
-        // 検索ワードを取得
-        $search_query = get_search_query();
-
-        // 検索クエリに基づく投稿を取得
-        $args = array(
-            's' => $search_query, // 検索クエリ
-            'posts_per_page' => -1, // 全ての投稿を取得
-            'fields' => 'ids', // 投稿 ID のみを取得
-        );
-        $query = new WP_Query($args);
-
-        // 取得した投稿 ID に基づきタグを取得
-        $post_ids = $query->posts;
-        $tags = wp_get_object_terms($post_ids, 'post_tag', array('fields' => 'all'));
-
-        // 現在のタグスラッグを取得（クエリパラメータから）
-        $current_tag_slug = get_query_var('tag');
-
-        // ALLタグをクリックした時のリンク設定
-        echo '<li class="tag_name"><a href="' . esc_url(home_url('/')) . '" class="' . (empty($current_tag_slug) ? 'selected' : '') . '">#ALL</a></li>';
-
-        // タグがある場合のみループ処理
-        if (!empty($tags) && !is_wp_error($tags)) {
-            foreach ($tags as $tag) {
-                // 各タグをリスト表示
-                echo '<li class="tag_name"><a href="' . esc_url(home_url('/')) . '?tag=' . urlencode($tag->slug) . '" class="' . ($current_tag_slug == $tag->slug ? 'selected' : '') . '">#' . esc_html($tag->name) . '</a></li>';
-            }
-        } else {
-            echo '<li class="tag_name">タグがありません</li>';
-        }
-
-        // WP_Queryをリセット
-        wp_reset_postdata();
-        ?>
-    </ul>
-
     <div class="double_border"></div>
 
     <?php
