@@ -16,64 +16,77 @@
                 <?php wp_head(); ?>
             </head>
 
-            <body>
-            <div id="home" class="header-overlay" style="background-image: url('<?php echo esc_url( get_theme_mod( 'trail_background_image' ) ); ?>');">
-    <header class="top-header">
-        <div class="openbtn">
-            <!-- ハンバーガーメニューのアイコン -->
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/design/trayl_logo_white.svg" alt="TRAILトップページ"></a></div>
-        <div class="date-container">
-            <p class="year"><?php echo date('Y'); ?> <?php $current_day_of_week_short = date('D');
-                                                        echo strtoupper($current_day_of_week_short); ?></p>
-            <p class="dateofweek"><?php echo date('m'); ?>.<?php echo date('d'); ?></p>
-            <span class="date-bar"></span>
-        </div>
-        <?php get_template_part('template-parts/hamburger-menu'); ?>
-    </header>
-    <div class="pickup-box">
-        <?php
-        // カスタムクエリで 'pickup' タグがついている最新の投稿を取得
-        $args = array(
-            'tag' => 'pickup',
-            'posts_per_page' => 1,
-        );
-        $pickup_query = new WP_Query($args);
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SD1GRBX7H"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
 
-        if ($pickup_query->have_posts()) :
-            while ($pickup_query->have_posts()) : $pickup_query->the_post();
-                // 投稿が属している最初のカテゴリを取得
-                $categories = get_the_category();
-                $custom_text = '未分類';
-                if (!empty($categories)) {
-                    $category = $categories[0];
-                    $custom_text = get_term_meta($category->term_id, 'custom_text', true);
-                    // カスタムテキストが空の場合、カテゴリ名を表示する
-                    if (empty($custom_text)) {
-                        $custom_text = $category->name;
-                    }
+                function gtag() {
+                    dataLayer.push(arguments);
                 }
-        ?>
-                <span>PICK UP</span>
-                <div class="marquee">
-                    <p>
-                        <?php echo esc_html($custom_text); ?>　|　
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </p>
+                gtag('js', new Date());
+
+                gtag('config', 'G-6SD1GRBX7H');
+            </script>
+
+            <body>
+                <div id="home" class="header-overlay" style="background-image: url('<?php echo esc_url(get_theme_mod('trail_background_image')); ?>');">
+                    <header class="top-header">
+                        <div class="openbtn">
+                            <!-- ハンバーガーメニューのアイコン -->
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/design/trayl_logo_white.svg" alt="TRAILトップページ"></a></div>
+                        <div class="date-container">
+                            <p class="year"><?php echo date('Y'); ?> <?php $current_day_of_week_short = date('D');
+                                                                        echo strtoupper($current_day_of_week_short); ?></p>
+                            <p class="dateofweek"><?php echo date('m'); ?>.<?php echo date('d'); ?></p>
+                            <span class="date-bar"></span>
+                        </div>
+                        <?php get_template_part('template-parts/hamburger-menu'); ?>
+                    </header>
+                    <div class="pickup-box">
+                        <?php
+                        // カスタムクエリで 'pickup' タグがついている最新の投稿を取得
+                        $args = array(
+                            'tag' => 'pickup',
+                            'posts_per_page' => 1,
+                        );
+                        $pickup_query = new WP_Query($args);
+
+                        if ($pickup_query->have_posts()) :
+                            while ($pickup_query->have_posts()) : $pickup_query->the_post();
+                                // 投稿が属している最初のカテゴリを取得
+                                $categories = get_the_category();
+                                $custom_text = '未分類';
+                                if (!empty($categories)) {
+                                    $category = $categories[0];
+                                    $custom_text = get_term_meta($category->term_id, 'custom_text', true);
+                                    // カスタムテキストが空の場合、カテゴリ名を表示する
+                                    if (empty($custom_text)) {
+                                        $custom_text = $category->name;
+                                    }
+                                }
+                        ?>
+                                <span>PICK UP</span>
+                                <div class="marquee">
+                                    <p>
+                                        <?php echo esc_html($custom_text); ?>　|　
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    </p>
+                                </div>
+                            <?php
+                            endwhile;
+                            wp_reset_postdata();
+                        else :
+                            ?>
+                            <span>PICK UP</span>
+                            <p>現在表示できる投稿はありません。</p>
+                        <?php endif; ?>
+                    </div>
                 </div>
-            <?php
-            endwhile;
-            wp_reset_postdata();
-        else :
-            ?>
-            <span>PICK UP</span>
-            <p>現在表示できる投稿はありません。</p>
-        <?php endif; ?>
-    </div>
-</div>
 
 
                 <div class="top-category-container">
@@ -221,7 +234,7 @@
 
 
             <footer>
-            <?php get_template_part('template-parts/footer'); ?>
+                <?php get_template_part('template-parts/footer'); ?>
             </footer>
 
             <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
