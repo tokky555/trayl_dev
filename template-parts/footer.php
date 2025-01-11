@@ -7,5 +7,5 @@
 </div>
 
         <p>CONTACT：reitokky555@gmail.com</p>
-        <p>(c) TRAIL All Rights Reserved. </p>
+        <p>(c) TRAYL All Rights Reserved. </p>
     </footer>
