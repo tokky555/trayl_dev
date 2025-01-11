@@ -5,7 +5,7 @@
         <span></span>
         <span></span>
     </div>
-    <div class="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/design/TRALロゴ_black.svg" alt="TRAILトップページ"></a></div>
+    <div class="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/design/trayl_logo_black.svg" alt="TRAILトップページ"></a></div>
     <div class="date-container">
         <p class="year"><?php echo date('Y'); ?> <?php $current_day_of_week_short = date('D');
                                                     echo strtoupper($current_day_of_week_short); ?></p>
